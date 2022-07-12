@@ -16,14 +16,20 @@ h3{
 h5{
   color:black
 }
-
+h6{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
 
 p{
   font-size:13px ;
   font-family: lato;
   font-weight: normal;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
+
+
 
 /*--------------------------------------------------GRILLA index--------------------------------------------*/
 
@@ -73,9 +79,8 @@ p{
   text-align: center;
   padding-top: 35px;
   background-color: rgb(0, 0, 0);
-  
-  
   }
+
   .item4 { grid-area: 4 / 1 / 5 / 3;
     text-align: center;
     background-color: black;
@@ -85,6 +90,68 @@ p{
   }
   .item5 { grid-area: 5 / 1 / 6 / 3; 
   justify-self: center;}
+
+
+
+  /*---------------------------------------------GRILLA y seccion BARBERIA----------------------------------------------*/
+
+  .barberia_contenedor {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo_menu_barberia logo_menu_barberia logo_menu_barberia"
+      "encabezado_barberia encabezado_barberia encabezado_barberia"
+      "tiposde_cortes tiposde_cortes tiposde_cortes"
+      "footer footer footer";
+  }
+  
+  .logo_menu_barberia { grid-area: logo_menu_barberia; 
+  text-align: center;
+  
+  
+  }
+  
+  .encabezado_barberia { grid-area: encabezado_barberia; }
+  
+  .tiposde_cortes { grid-area: tiposde_cortes; }
+  
+  .footer { grid-area: footer; }
+  
+
+
+  .tiposde_cortes{
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+.p card-text{
+color: black;
+}
+
+/*----------------------------------------------grilla Pagina tattoo----------------------------------------------------------*/
+
+.barberia_contenedor {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr ;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logoymenu_tattoo logoymenu_tattoo logoymenu_tattoo"
+    "tipoDEtatuajes tipoDEtatuajes tipoDEtatuajes"
+    "consejos consejos consejos"
+    "footer footer footer";
+}
+
+.logoymenu_tattoo { grid-area: logoymenu_tattoo; }
+
+.tipoDEtatuajes { grid-area: tipoDEtatuajes; }
+
+.consejos { grid-area: consejos; }
+
+.footer { grid-area: footer; }
+
+
 
 
 /*------------------------------------------menu botones------------------------------------------------------*/
@@ -272,9 +339,9 @@ padding-right: 20px;}
 .carta2 { grid-area: carta2; }
 
 
-
+/*-----------------------------------------------------------------------------------------------------------------------------*/
 /*Media queris*/
-
+/*-----------------------------------------------------------------------------------------------------------------------------*/
 /*Tablets*/
 
 @media all and (max-width: 1024px){
@@ -351,12 +418,49 @@ padding-bottom: 35px;}
 
 .pr4 { grid-area: pr4;}
 
-}
+
 
 .boton_verMAS{
 justify-content: center;
-padding-top: 35px;
+padding-top: 35px;}
+
+
+.imagen_contacto{
+  display: flex;
+  
 }
+.consejosTATTOO {  display: grid;
+  grid-template-columns: 0.5fr ;
+  grid-template-rows: 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "consejo-1" "consejo2";
+}
+
+.consejo-1 { grid-area: consejo-1; }
+
+.consejo2 { grid-area: consejo2; }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+
+}
+
+
+
+
+
+
+
+
 
 
 /*Desktop*/
@@ -368,6 +472,308 @@ padding-top: 35px;
   }
 }  
 
+
+/*-------------------------------------pagina tattoo-------------------------------------------*/
+
+.titulo_tatuaje{
+  text-align: center;
+  padding-top: 35px;
+}
+
+.botonVERMAS{
+  display:flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  padding-top: 35px;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+
+  
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.titulo_consejo{
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.titulo_curacion{
+  padding-top: 35px;
+}
+
+.img_icon2{
+  display: flex;
+  justify-content:  center;
+}
+.titulo_curacion2{
+  text-align: center;
+  padding-top: 35px;
+}
+
+.parrafo_rascar{
+  text-align: center;
+}
+
+.consejosTATTOO {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "consejo-1 consejo2";
+}
+
+.consejo-1 { grid-area: consejo-1; 
+justify-self: center;
+text-align: center;}
+
+.consejo2 { grid-area: consejo2; 
+text-align: center;}
+
+
+.footertattoo{
+display: flex;
+text-align: center;
+justify-content: center;
+background-color: #777;
+}
+
+.consejos{
+padding-bottom: 100px;
+}
+
+@media screen and (max-width: 500px){
+  
+
+  .consejosTATTOO {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "consejo-1"
+      "consejo2";
+  }
+  
+  .consejo-1 { grid-area: consejo-1; 
+  justify-self: center;
+  text-align: center;}
+  
+  .consejo2 { grid-area: consejo2; 
+  text-align: center;}
+}
+
+/*-------------------------------------sobre nosotros-------------------------------------------*/
+
+.sobreNOSOTROS {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logoymenu_barber logoymenu_barber logoymenu_barber"
+    "Contenido Contenido Contenido"
+    "footer footer footer";
+}
+
+.logoymenu_barber { grid-area: logoymenu_barber; }
+
+.Contenido {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nuestra_barberia nuestro_estudioT";
+  grid-area: Contenido;
+  
+}
+
+.nuestra_barberia { grid-area: nuestra_barberia; 
+justify-self: center; }
+
+.nuestro_estudioT { 
+grid-area: nuestro_estudioT;  
+}
+
+.footer{ grid-area: footer; 
+justify-self: center;
+}
+
+.img_estudio{
+  display: flex;
+  justify-content : left; 
+  
+  padding-left: 70px;
+  }
+
+
+.texto_estudio{
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;
+  justify-self: center;
+  
+}
+
+.img_barber{
+  display: flex;
+  justify-content: center; 
+}
+
+.texto_barber{
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px; 
+}
+.footer_inicio3{
+  display: flex;
+  justify-content: center;
+  
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 500px){
+
+  .Contenido {  display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nuestra_barberia" "nuestro_estudioT";
+    grid-area: Contenido;
+  }
+  
+  .nuestra_barberia { grid-area: nuestra_barberia; 
+  justify-self: center;}
+  
+  .nuestro_estudioT { 
+  grid-area: nuestro_estudioT; 
+  }
+  
+  .img_estudio{
+    display: flex;
+    justify-content : left; 
+    padding-left: 25px;
+    }
+  .texto_estudio{
+    display: inline-block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    padding-left: 20px;
+    padding-right: 25px;
+  }
+  
+  .img_barber{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .texto_barber{
+    display: inline-block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
+  
+
+}
+
+/*-------------------------------------PAGINA SERVICIOS-------------------------------------------*/
+
+.contenedor_prod {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr ;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu menu menu"
+    "productos productos productos"
+    "promo promo promo"
+    "pie pie pie";
+}
+
+.menu { grid-area: menu; }
+
+.productos { grid-area: productos; }
+
+.promo { grid-area: promo; }
+
+.pie { grid-area: pie; }
+
+
+
+
+
+.button {
+  background-color: #dec509;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.pie{
+display: flex;
+justify-content: center;
+
+}
 /*-------------------------------------footer-------------------------------------------*/
 
 .footer_inicio{
