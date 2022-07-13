@@ -1,0 +1,740 @@
+body {
+  background-color: black;
+  color: azure;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: lato;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 16px;
+  font-family: lato;
+  font-weight: bold;
+}
+
+h5 {
+  color: black;
+}
+
+h6 {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 13px;
+  font-family: lato;
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+}
+
+/*--------------------------------------------------GRILLA index--------------------------------------------*/
+.parent {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr repeat(3, 0);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1/1/2/3;
+}
+
+.div2 {
+  grid-area: 2/1/3/3;
+}
+
+.div3 {
+  grid-area: 3/1/4/3;
+  text-align: center;
+  padding-top: 35px;
+  background-color: rgb(86, 86, 86);
+}
+
+.div4 {
+  grid-area: 4/1/5/3;
+  text-align: center;
+  background-color: black;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.div5 {
+  grid-area: 5/1/6/3;
+}
+
+/*-------------------------------------productos index--------------------------------------------*/
+.prodcutos_index {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "pr1 pr2 pr3 pr4";
+}
+
+.pr1 {
+  grid-area: pr1;
+}
+
+.pr2 {
+  grid-area: pr2;
+}
+
+.pr3 {
+  grid-area: pr3;
+}
+
+.pr4 {
+  grid-area: pr4;
+}
+
+.titulo_pro {
+  padding-bottom: 15px;
+}
+
+/*---------------------------------------------GRILLA CONTACTO----------------------------------------------*/
+.padre_contacto {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr repeat(3, 0);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.item1 {
+  grid-area: 1/1/2/3;
+}
+
+.item2 {
+  grid-area: 2/1/3/3;
+}
+.item2 .texto_1FORM {
+  text-align: center;
+  padding-top: 35px;
+}
+.item2 .texto_inicio {
+  grid-area: 1/1/2/2;
+  text-align: end;
+  justify-self: end;
+}
+
+.item3 {
+  grid-area: 3/1/4/3;
+  text-align: center;
+  padding-top: 35px;
+  background-color: rgb(0, 0, 0);
+}
+
+.item4 {
+  grid-area: 4/1/5/3;
+  text-align: center;
+  background-color: black;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.item5 {
+  grid-area: 5/1/6/3;
+  justify-self: center;
+}
+
+/*---------------------------------------------GRILLA y seccion BARBERIA----------------------------------------------*/
+.barberia_contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logo_menu_barberia logo_menu_barberia logo_menu_barberia" "encabezado_barberia encabezado_barberia encabezado_barberia" "tiposde_cortes tiposde_cortes tiposde_cortes" "footer footer footer";
+}
+
+.logo_menu_barberia {
+  grid-area: logo_menu_barberia;
+  text-align: center;
+}
+
+.encabezado_barberia {
+  grid-area: encabezado_barberia;
+}
+
+.tiposde_cortes {
+  grid-area: tiposde_cortes;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.tiposde_cortes {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.p card-text {
+  color: black;
+}
+
+/*----------------------------------------------grilla Pagina tattoo----------------------------------------------------------*/
+.barberia_contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logoymenu_tattoo logoymenu_tattoo logoymenu_tattoo" "tipoDEtatuajes tipoDEtatuajes tipoDEtatuajes" "consejos consejos consejos" "footer footer footer";
+}
+
+.logoymenu_tattoo {
+  grid-area: logoymenu_tattoo;
+}
+
+.tipoDEtatuajes {
+  grid-area: tipoDEtatuajes;
+}
+
+.consejos {
+  grid-area: consejos;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/*------------------------------------------menu botones------------------------------------------------------*/
+/* Menu*/
+nav {
+  background-color: rgb(255, 179, 1);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+nav ul li {
+  list-style-type: none;
+  background-color: rgb(255, 179, 1);
+  padding: 16px 6px;
+  margin: 8px 0px;
+}
+nav ul li :hover ul {
+  display: block;
+  position: absolute;
+  margin-left: -46px;
+  margin-top: 15px;
+}
+
+nav ul ul {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*---------------------------------------FORMULARIO DE CONTACTO-------------------------------*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #fff201;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #ffc400;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #9e0e0e;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.titulo_formulario {
+  justify-content: center;
+  text-align: center;
+  padding-top: 35px;
+}
+.titulo_formulario .titulo_form2 {
+  color: white;
+  text-align: center;
+}
+
+/*------------------------------------------logo--------------------------------------------------------*/
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 35px;
+  padding-top: 35px;
+}
+
+/*---carta-----*/
+.carta_servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "card1 card2";
+}
+
+.card1 {
+  grid-area: card1;
+  justify-self: end;
+}
+
+.card2 {
+  grid-area: card2;
+  padding-left: 15px;
+}
+
+/*-------------------------------------carta servicios--------------------------------------------*/
+.cartas_servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "carta1 carta2";
+  justify-self: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.carta1 {
+  grid-area: carta1;
+  justify-self: end;
+  padding-right: 20px;
+}
+
+.carta2 {
+  grid-area: carta2;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*Media queris*/
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*Tablets*/
+@media all and (max-width: 1024px) {
+  nav ul {
+    display: block;
+  }
+
+  body {
+    font-size: 1rem;
+    background-color: rgb(0, 0, 0);
+  }
+}
+/*Smartphone*/
+@media all and (max-width: 500px) {
+  nav ul {
+    display: block;
+  }
+
+  body {
+    font-size: 0.75rem;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .cartas_servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "carta1 " "carta2";
+    justify-self: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .carta1 {
+    grid-area: carta1;
+    justify-self: center;
+    padding-right: 20px;
+    padding-bottom: 35px;
+  }
+
+  .carta2 {
+    grid-area: carta2;
+    justify-self: center;
+  }
+
+  .prodcutos_index {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 0.4fr;
+    justify-content: center;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "pr1" "pr2" "pr3" "pr4";
+  }
+
+  .pr1 {
+    grid-area: pr1;
+  }
+
+  .pr2 {
+    grid-area: pr2;
+  }
+
+  .pr3 {
+    grid-area: pr3;
+  }
+
+  .pr4 {
+    grid-area: pr4;
+  }
+}
+/*Desktop*/
+@media only screen and (min-width: 1025px) {
+  body {
+    background-color: black;
+    font-size: 1.1rem;
+  }
+}
+/*-------------------------------------pagina tattoo-------------------------------------------*/
+.titulo_tatuaje {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.botonVERMAS {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+div.gallery {
+  border: 1px solid rgb(86, 86, 86);
+}
+
+div.gallery:hover {
+  border: 1px solid rgb(86, 86, 86);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  padding-top: 35px;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.titulo_consejo {
+  display: inline-block;
+  justify-content: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.titulo_curacion {
+  padding-top: 35px;
+}
+
+.img_icon2 {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo_curacion2 {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.parrafo_rascar {
+  text-align: center;
+}
+
+.consejosTATTOO {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "consejo-1 consejo2";
+}
+
+.consejo-1 {
+  grid-area: consejo-1;
+  justify-self: center;
+  text-align: center;
+}
+
+.consejo2 {
+  grid-area: consejo2;
+  text-align: center;
+}
+
+.footertattoo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(86, 86, 86);
+}
+
+.consejos {
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .consejosTATTOO {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "consejo-1" "consejo2";
+  }
+
+  .consejo-1 {
+    grid-area: consejo-1;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .consejo2 {
+    grid-area: consejo2;
+    text-align: center;
+  }
+}
+/*-------------------------------------sobre nosotros-------------------------------------------*/
+.sobreNOSOTROS {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logoymenu_barber logoymenu_barber logoymenu_barber" "Contenido Contenido Contenido" "footer footer footer";
+}
+
+.logoymenu_barber {
+  grid-area: logoymenu_barber;
+}
+
+.Contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "nuestra_barberia nuestro_estudioT";
+  grid-area: Contenido;
+}
+
+.nuestra_barberia {
+  grid-area: nuestra_barberia;
+  justify-self: center;
+}
+
+.nuestro_estudioT {
+  grid-area: nuestro_estudioT;
+}
+
+.footer {
+  grid-area: footer;
+  justify-self: center;
+}
+
+.img_estudio {
+  display: flex;
+  justify-content: left;
+  padding-left: 70px;
+}
+
+.texto_estudio {
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;
+  justify-self: center;
+}
+
+.img_barber {
+  display: flex;
+  justify-content: center;
+}
+
+.texto_barber {
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.footer_inicio3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .Contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas: "nuestra_barberia" "nuestro_estudioT";
+    grid-area: Contenido;
+  }
+
+  .nuestra_barberia {
+    grid-area: nuestra_barberia;
+    justify-self: center;
+  }
+
+  .nuestro_estudioT {
+    grid-area: nuestro_estudioT;
+  }
+
+  .img_estudio {
+    display: inline-block;
+    justify-content: center;
+    padding-left: 25px;
+  }
+
+  .texto_estudio {
+    display: inline-block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    padding-left: 20px;
+    padding-right: 25px;
+  }
+
+  .img_barber {
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .texto_barber {
+    display: inline-block;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
+}
+/*-------------------------------------PAGINA SERVICIOS-------------------------------------------*/
+.contenedor_prod {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "menu menu menu" "productos productos productos" "promo promo promo" "pie pie pie";
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.productos {
+  grid-area: productos;
+}
+
+.promo {
+  grid-area: promo;
+}
+
+.pie {
+  grid-area: pie;
+}
+
+.button {
+  background-color: #dec509;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+}
+
+/*-------------------------------------footer-------------------------------------------*/
+.footer_inicio {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.footer_inicio2 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}/*# sourceMappingURL=generales.css.map */
