@@ -1,0 +1,18 @@
+$fuentes:(
+h2:50px,
+h3:16px,
+h4:12px,
+h5:17px,
+h6:27px,
+p:13px
+
+);
+
+$h2: map-get($fuentes, h2 );
+$h3: map-get($fuentes, h3 );
+$h4: map-get($fuentes, h4);
+$h5: map-get($fuentes, h5 );
+$h6: map-get($fuentes, h6 );
+$p: map-get($fuentes, p );
+
+

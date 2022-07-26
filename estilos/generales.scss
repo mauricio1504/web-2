@@ -1,11 +1,7 @@
 @import "variables";
 @import"estilos";
+@import"mixin";
 
-
-
-
-
-/*--------------------------------------------------GRILLA index--------------------------------------------*/
 
 .parent {
   display: grid;
@@ -33,7 +29,53 @@
     padding-bottom: 35px;
   
   }
-  .div5 { grid-area: 5 / 1 / 6 / 3;  }
+  .div5 { grid-area: 5 / 1 / 6 / 3; 
+  display:flex; justify-content: center; }
+
+
+
+
+
+  @media all and (max-width: 500px){
+
+
+    .parent {
+      display: grid;
+      grid-template-columns: 0.3fr;
+      grid-template-rows: repeat(1, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+     
+    
+      }
+      
+      .div1 { grid-area: 1 / 1 / 1 / 1; }
+      .div2 { grid-area: 1 / 1 / 1 /1; }
+      .div3 { grid-area: 1 / 1 / 1 / 1; 
+      text-align: center;
+      padding-top: 35px;
+      background-color: $colorDIV;
+      
+      
+      }
+      .div4 { grid-area: 4 / 1 / 5 / 3;  
+        text-align: center;
+        background-color: black;
+        padding-top: 35px;
+        padding-bottom: 35px;
+      
+      }
+      .div5 { grid-area: 5 / 1 / 6 / 3; 
+      display:flex; justify-content: center; }
+    
+
+
+
+  }
+
+
+
+
 
   /*-------------------------------------productos index--------------------------------------------*/
 .prodcutos_index {  
@@ -336,7 +378,7 @@ padding-right: 20px;}
 @media all and (max-width: 1024px){
   nav ul{
       display: block;
-  }
+ }
   body{
       font-size: 1rem;
       background-color: rgb(0, 0, 0); 
@@ -349,6 +391,8 @@ padding-right: 20px;}
 @media all and (max-width: 500px){
   nav ul{
       display: block;
+      justify-content: center;
+      padding-left: 50px;
      
   }
   body{
@@ -681,37 +725,86 @@ justify-self: center;
     "pie pie pie";
 }
 
-.menu { grid-area: menu; }
+.menu { grid-area: menu; 
+  text-align: center}
 
-.productos { grid-area: productos; }
+.productos { grid-area: productos;
+ 
+  
 
+  .button {
+    background-color: #dec509;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding:25px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+  
+  .card-group{
+  
+    
+    margin: 15px;
+    
+
+   }
+  
+  }
+
+  .boton_precio{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+   
+  }
+
+  
+  .cuadrado-1{
+    @include cuadrado;
+padding-top: 17px;
+    .titulo-cuadrado1{
+      display:inline-block;
+      justify-content: center;
+      padding-top: 30px;
+       }
+  }
+  .cuadrado-2{
+    @include cuadrado;
+
+    .titulo-cuadrado2{
+      display:inline-block;
+      justify-content: center;
+      padding-top: 30px;
+     }
+
+  }
+
+
+
+
+ .formade-pago{
+  padding-bottom: 15px;
+ }
+
+
+ 
 .promo { grid-area: promo; }
 
 .pie { grid-area: pie; }
-
-
-
-
-
-.button {
-  background-color: #dec509;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
 
 .pie{
 display: flex;
 justify-content: center;
 
 }
+
+
+
 /*-------------------------------------footer-------------------------------------------*/
 
 .footer_inicio{
