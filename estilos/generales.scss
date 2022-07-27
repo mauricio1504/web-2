@@ -19,7 +19,7 @@
   text-align: center;
   padding-top: 35px;
   background-color: $colorDIV;
-  
+  justify-content: center;
   
   }
   .div4 { grid-area: 4 / 1 / 5 / 3;  
@@ -31,6 +31,26 @@
   }
   .div5 { grid-area: 5 / 1 / 6 / 3; 
   display:flex; justify-content: center; }
+
+.secciones{
+
+  .carta1{
+    @include cartas;
+  }
+
+  .carta2{
+    @include cartas;
+  }
+
+.titulo_carta1{
+  padding-top: 15px;
+}
+
+.titulo_carta2{
+  padding-top: 15px;
+}
+ 
+}
 
 
 
@@ -68,8 +88,7 @@
       .div5 { grid-area: 5 / 1 / 6 / 3; 
       display:flex; justify-content: center; }
     
-
-
+     
 
   }
 
