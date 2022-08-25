@@ -33,23 +33,28 @@
   display:flex; justify-content: center; }
 
 .secciones{
-
+    
   .carta1{
     @include cartas;
+    padding-bottom: 35px;
   }
 
   .carta2{
     @include cartas;
+    padding-bottom: 35px;
   }
 
 .titulo_carta1{
   padding-top: 15px;
+ 
 }
 
 .titulo_carta2{
   padding-top: 15px;
+  
 }
  
+
 }
 
 
@@ -219,7 +224,8 @@ color: black;
 
 .logoymenu_tattoo { grid-area: logoymenu_tattoo; }
 
-.tipoDEtatuajes { grid-area: tipoDEtatuajes; }
+.tipoDEtatuajes { grid-area: tipoDEtatuajes; 
+}
 
 .consejos { grid-area: consejos; }
 
@@ -540,10 +546,12 @@ div.desc {
 }
 
 .titulo_consejo{
-  display:inline-block;
-  justify-content: center;
-  padding-top: 35px;
+  display:flex;
+  border: 1px solid black;
+  background-color: rgb(62, 61, 61);
+  padding-top: 50px;
   padding-bottom: 35px;
+  justify-content: center;
 }
 .titulo_curacion{
   padding-top: 35px;
@@ -575,7 +583,7 @@ div.desc {
 justify-self: center;
 text-align: center;}
 
-.consejo2 { grid-area: consejo2; 
+.consejo2 { grid-area: consejo2; justify-self: center;
 text-align: center;}
 
 
@@ -677,6 +685,7 @@ justify-self: center;
 .footer_inicio3{
   display: flex;
   justify-content: center;
+
   
   padding-top: 35px;
   padding-bottom: 15px;
@@ -829,9 +838,126 @@ justify-content: center;
 .footer_inicio{
   padding-top: 15px;
   padding-bottom: 10px;
+  
 }
 
 .footer_inicio2{
   padding-top: 15px;
   padding-bottom: 10px;
+  
+}
+
+
+/*-------------------------------------sobre nosotros-------------------------------------------*/
+
+.nosotros{
+  display: flex;
+  justify-content:center;
+  padding-bottom: 45px;
+  padding-top: 45px;
+  
+}
+
+  
+.container-fluid{
+display: flex;
+justify-content: center;
+padding-top: 35px;
+text-align: center;
+background-color: rgb(255, 218, 6);
+padding-bottom: 35px;
+
+.jumbotron{
+  color: white;
+}
+
+
+}
+
+/*-------------------------------------seccion consejos-------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.containercon {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  
+  
+}
+
+.contenedor1 { grid-area: 1 / 1 / 2 / 3; }
+
+.con1 { grid-area: 1 / 1 / 2 / 2;
+ 
+width: 700px;
+height: 500px;
+padding-left: 50px;
+}
+
+.con2 { grid-area: 1 / 2 / 2 / 3;
+   
+  width: 700px;
+  height: 500px;
+  padding-left: 50px;}
+
+.todo{
+  display: inline-block;
+  
+  
+  width: 1500px; 
+  height: 100px; 
+
+}
+.tituloCON{
+  display: inline-block;
+  justify-self: center;
+padding-left: 500px;
+
+}
+
+@media screen and (max-width: 500px){
+
+  .containercon {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "con1""con2";
+    
+    
+  }
+  
+  .contenedor1 { grid-area: 1 / 1 / 2 / 3; }
+  
+  .con1 { grid-area: con1; ;
+   
+  width: auto;
+  height: auto;
+  padding-left: 0px;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  }
+  
+  .con2 {  grid-area: con2;
+     
+    width: auto;
+    height: auto;
+    padding-left: 0px;}
+  
+  .todo{
+    display: inline-block;
+    
+    
+    width: 1500px; 
+    height: 100px; 
+  
+  }
+  .tituloCON{
+    display: inline-block;
+    justify-self: center;
+  padding-left: 500px;
+  
+  }
+
 }
